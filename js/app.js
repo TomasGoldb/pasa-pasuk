@@ -2,11 +2,11 @@
 // -----------------------------------------------------------------------------
 
 var words = [
-	new Word(0, "A", "Empieza por A:", " Relato breve de un acontecimiento extraño, curioso o divertido, generalmente ocurrido a la persona que lo cuenta.", "Anecdota"),
-	new Word(1, "B", "Empieza por B:", " Pasta dulce y esponjosa, hecha con harina, huevos, levadura y otros ingredientes, que puede tener distintas formas", "Bollo"),
-	new Word(2, "C", "Empieza por C:", " Corriente de agua que cae desde cierta altura a causa de un brusco desnivel en su cauce, especialmente en un rio", "Cascada"),
-	new Word(3, "D", "Empieza por D:", " Arma blanca de hoja corta, ancha y puntiaguda, parecida a la espada pero de menor tamaño", "Daga"),
-	new Word(4, "E", "Empieza por E:", " Línea curva que describe varias vueltas alrededor de un punto, alejándose cada vez más de él", "Espiral"),
+	new Word(0, "A", "Empieza por A:", " ¿Qué estuvo haciendo Shlomó con las mujeres en este capítulo?", "AUMENTARLAS"),
+	new Word(1, "B", "Contiene la B:", "  ¿Qué es lo que se reparte en este capítulo?", "tribus"),
+	new Word(2, "C", "Empieza por C:", " ¿Que le rasgó Ajia a Jeroboam?", "capa"),
+	new Word(3, "D", "Contiene la D:", " ¿Como se llama la región en donde David exterminó a todos los hombres?", "Edom"),
+	new Word(4, "E", "Empieza por E:", " ¿A dónde huyó Jeroboam?", "Espiral"),
 	new Word(5, "F", "Contiene la F:", " Que está descompuesto o podrido por la acción de diversos factores y determinados microorganismos", "Putrefacto"),
 	new Word(6, "G", "Empieza por G:", " Que se comporta de manera ruda, tosca o grosera", "Garrulo"),
 	new Word(7, "H", "Contiene la H:", " Persona o animal que es grueso y de poca altura", "Rechoncho"),
