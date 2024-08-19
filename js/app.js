@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------------------
 
 var words = [
-	new Word(0, "A", "Empieza por A:", " ¿Qué estuvo haciendo Shlomó con las mujeres en este capítulo?", "AUMENTARLAS"),
+	new Word(0, "A", "Empieza por A:", " ¿Qué estuvo haciendo Shlomó con las mujeres en este capítulo?", "AUMENTARLAS/Aumentar"),
 	new Word(1, "B", "Contiene la B:", "  ¿Qué es lo que se reparte en este capítulo?", "tribus"),
 	new Word(2, "C", "Empieza por C:", " ¿Que le rasgó Ajia a Jeroboam?", "capa"),
 	new Word(3, "D", "Contiene la D:", " ¿Como se llama la región en donde David exterminó a todos los hombres?", "Edom"),
@@ -12,16 +12,16 @@ var words = [
 	new Word(7, "H", "Empieza por H:", " ¿Que era Rejavam de Shlomó?", "Hijo"),
 	new Word(8, "I", "Contiene la I:", " ¿Cómo se llama el padre de Jedidias?", "David"),
 	new Word(9, "J", "Contiene la J:", " ¿Cómo se llama el profeta que aparece en este capítulo?", "Ajia"),
-	new Word(10, "L", "Empieza por L:", " ¿Con qué objeto representa  D’’s  la promesa de descendencia de David, representando la continuidad de su dinastía?", "Lampara"),
-	new Word(11, "M", "Empieza por M:", " ¿Que desobedeció Shlomo al momento de adorar otros dioses? ", "Mandamientos"),
-	new Word(12, "N", "Contiene la N:", "  ¿Cuál es el nombre de uno de los enemigos de Shlomó de este capítulo?", "Rzon"),
-	new Word(13, "Ñ", "Contiene la Ñ:", " Dar a una cosa un color distinto del que tiene.", "Teñir"),
+	new Word(10, "K", "Empieza por K:", " ¿Cómo se llama uno de los ídolos de los moabitas?", "Kmosh"),
+	new Word(11, "L", "Empieza por L:", " ¿Con qué objeto representa  D’’s  la promesa de descendencia de David, representando la continuidad de su dinastía?", "Lampara"),
+	new Word(12, "M", "Empieza por M:", " ¿Que desobedeció Shlomo al momento de adorar otros dioses? ", "Mandamientos"),
+	new Word(13, "N", "Contiene la N:", "  ¿Cuál es el nombre de uno de los enemigos de Shlomó de este capítulo?", "Rzon"),
 	new Word(14, "O", "Contiene la O:", " ¿Que le hicieron a Shlomó en la ciudad de David al final de este capítulo?", "Enterrarlo"),
 	new Word(15, "P", "Empieza por P:", " ¿Cómo se llamaba el gobernante de Egipto que dio casa y tierras a Hadad?.", "Paro"),
 	new Word(16, "Q", "Empieza por Q:", " Que se puede romper fácilmente.", "Quebradizo"),
 	new Word(17, "R", "Empieza por R:", " ¿Cómo se llama el hijo de Shlomo que le sucede en el trono?", "Rejavam"),
 	new Word(18, "S", "Empieza por S:", " Cantidad de esposas que tuvo shlomó", "Setecientas"),
-	new Word(19, "T", "Contiene la T-----------:", " Persona alocada, bulliciosa y molesta.", "Tabardillo"),
+	new Word(19, "T", "Contiene la T:", " Persona alocada, bulliciosa y molesta.", "Moavitas"),
 	new Word(20, "U", "Contiene la U:", " ¿Que construyó Shlomó para sus esposas de otros reinos?", "Estatuas"),
 	new Word(21, "V", "Contiene la V:", " ¿Qué son lo que D”s fue presentándole a Shlomó? ", "Adversarios"),
 	new Word(22, "X", "Contiene la X:", " ¿Cómo eran las mujeres con las que se casó Shlomó? ", "Extranjeras"),
@@ -50,19 +50,22 @@ var remainingWords = 25;
 
 function checkAnswer(pos) {
 	var userAnswer = $("#js--user-answer").val().toLowerCase();
-	if (userAnswer == words[pos].word.toLowerCase()) {
+	var correctAnswers = words[pos].word.toLowerCase().split('/');
+
+	if (correctAnswers.includes(userAnswer)) {
 		words[pos].correct = true;
 		$(".circle .item").eq(words[pos].idNumber).addClass("item--success");
-
 	} else {
 		words[pos].correct = false;
 		$(".circle .item").eq(words[pos].idNumber).addClass("item--failure");
 	}
+
 	remainingWords--;
-	$("js--score").html(remainingWords);
+	$("#js--score").html(remainingWords);
 
 	return count++;
 }
+
 
 function pasapalabra(pos) {
 	var w = words.splice(pos, 1)[0];
