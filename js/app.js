@@ -14,7 +14,7 @@ var words = [
 	new Word(9, "J", "Contiene la J:", " ¿Cómo se llama el profeta que aparece en este capítulo?", "Ajia"),
 	new Word(10, "K", "Empieza por K:", " ¿Cómo se llama uno de los ídolos de los moabitas?", "Kmosh"),
 	new Word(11, "L", "Empieza por L:", " ¿Con qué objeto representa  D’’s  la promesa de descendencia de David, representando la continuidad de su dinastía?", "Lampara"),
-	new Word(12, "M", "Empieza por M:", " ¿Que desobedeció Shlomo al momento de adorar otros dioses? ", "Mandamientos"),
+	new Word(12, "M", "Empieza por M:", " ¿Que desobedeció Shlomo al momento de adorar otros dioses? ", "Mandamiento"),
 	new Word(13, "N", "Contiene la N:", "  ¿Cuál es el nombre de uno de los enemigos de Shlomó de este capítulo?", "Rzon"),
 	new Word(14, "O", "Contiene la O:", " ¿Que le hicieron a Shlomó en la ciudad de David al final de este capítulo?", "Enterrarlo"),
 	new Word(15, "P", "Empieza por P:", " ¿Cómo se llamaba el gobernante de Egipto que dio casa y tierras a Hadad?.", "Paro"),
